@@ -34,9 +34,21 @@
                         aria-describedby="inputGroupFileAddon01">
                     <label class="custom-file-label" for="inputGroupFile01">Chọn ảnh màu thứ nhất</label>
                 </div>
-                <img id="img-preview-1" src="" alt="image1">
-                <input type="color" name="color1" id="color1">
-                <input type="number" name="percent1" id="percent1" value="5">
+                <img id="img-preview-1" src="" alt="image1" hidden>
+                <div class="control">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Màu</span>
+                        </div>
+                        <input class="form-control" type="color" name="color1" id="color1">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Tỉ lệ</span>
+                        </div>
+                        <input class="form-control" type="number" name="percent1" id="percent1" value="5">
+                    </div>
+                </div>
             </div>
             <div class="img-picker-2">
                 <div class="custom-file">
@@ -44,12 +56,24 @@
                         aria-describedby="inputGroupFileAddon01">
                     <label class="custom-file-label" for="inputGroupFile01">Chọn ảnh màu thứ hai</label>
                 </div>
-                <img id="img-preview-2" src="" alt="image2">
-                <input type="color" name="color2" id="color2">
-                <input type="number" name="percent2" id="percent2" value="5">
+                <img id="img-preview-2" src="" alt="image2" hidden>
+                <div class="control">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Màu</span>
+                        </div>
+                        <input class="form-control" type="color" name="color2" id="color2">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Tỉ lệ</span>
+                        </div>
+                        <input class="form-control" type="number" name="percent2" id="percent2" value="5">
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="button"><button type="button" id="merge" class="btn btn-success">Tiến hành</button></div>
+        <div class="button"><button type="button" id="merge" class="btn btn-success btn-lg">Tiến hành</button></div>
         <div class="result">
             <img id="img-result" src="result.jpg" alt="result">
             <div id="img-bg"></div>

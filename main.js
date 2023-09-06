@@ -65,7 +65,7 @@ $(document).ready(function () {
         return { r, g, b };
     }
     $('#image1').on('change', (e) => {
-        $('#img-preview-1').attr('src', URL.createObjectURL(e.target.files[0]));
+        $('#img-preview-1').attr({ 'src': URL.createObjectURL(e.target.files[0]), hidden: false });
         const img = document.createElement('img');
         img.src = URL.createObjectURL(e.target.files[0]);
         setTimeout(() => {
@@ -74,7 +74,7 @@ $(document).ready(function () {
         }, 500);
     })
     $('#image2').on('change', (e) => {
-        $('#img-preview-2').attr('src', URL.createObjectURL(e.target.files[0]));
+        $('#img-preview-2').attr({ 'src': URL.createObjectURL(e.target.files[0]), hidden: false });
         const img = document.createElement('img');
         img.src = URL.createObjectURL(e.target.files[0]);
         setTimeout(() => {
