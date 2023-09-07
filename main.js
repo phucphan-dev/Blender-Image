@@ -97,4 +97,18 @@ $(document).ready(function () {
     $(window).on("resize", function () {
         $('main').css('height', `${window.innerHeight}px`)
     });
+
+    $('#percent1').on('change', (e) => {
+        $('#percent2').val(10 - e.target.value);
+    });
+
+    $('#percent2').on('change', (e) => {
+        $('#percent1').val(10 - e.target.value);
+    });
+    $('#template').on('change', (e) => {
+        $('#img-result').attr('src', e.target.value);
+    })
+    $('#templateUpload').on('change', (e) => {
+        $('#img-result').attr('src', URL.createObjectURL(e.target.files[0]));
+    })
 });
