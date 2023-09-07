@@ -7,27 +7,52 @@ body {
     box-sizing: border-box;
 }
 
+main {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
 .picker {
     display: flex;
+    flex: 1;
+    height: 50%;
+    width: 100%;
 }
 
 .img-picker-1,
 .img-picker-2 {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     position: relative;
-    padding: 16px 8px;
+    padding:  8px;
+}
+
+.preview {
+    flex-grow: 1;
+    position: relative;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 #img-preview-1,
-#img-preview-2,
-#img-result {
-    display: block;
-    margin: 16px auto;
+#img-preview-2, #img-result {
+    position: absolute;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
 
 .result {
     position: relative;
-    max-height: 50vh;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
 }
 
 #img-bg {
@@ -38,18 +63,29 @@ body {
     mix-blend-mode: overlay;
 }
 
+.custom-file {
+    flex-shrink: 0;
+}
+
 .custom-file-label::after {
     content: "Chọn" !important;
 }
 
 .button {
+    position: relative;
+    z-index: 9;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 48px;
+    margin-top: 16px;
     margin-bottom: 16px;
 }
 
+.control {
+    flex-shrink: 0;
+}
+
 .control .input-group {
-    margin: 16px 8px
+    padding: 4px
 }

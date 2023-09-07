@@ -88,11 +88,13 @@ $(document).ready(function () {
         const color2 = hex2rgb($('#color2').val());
         const per1 = parseInt($('#percent1').val());
         const per2 = parseInt($('#percent2').val());
-        // const colorMerge = `rgb(${(color1.r + color2.r) / 2}, 
-        // ${(color1.g + color2.g) / 2},
-        // ${(color1.b + color2.b) / 2})`;
         const colorMerge = `rgb(${Math.floor((color1.r * per1 + color2.r * per2) / 10)},${Math.floor((color1.g * per1 + color2.g * per2) / 10)},${Math.floor((color1.b * per1 + color2.b * per2) / 10)})`;
         console.log({ color: colorMerge });
         $('#img-bg').css('background-color', colorMerge);
+    });
+    $('main').css('height', `${window.innerHeight}px`)
+
+    $(window).on("resize", function () {
+        $('main').css('height', `${window.innerHeight}px`)
     });
 });
